@@ -1,0 +1,55 @@
+﻿<Window x:Class="StudySystem.UserAccount"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudySystem"
+        mc:Ignorable="d"
+        Title="UserAccount" Width="1540" Height="850"
+        WindowState="Maximized">
+    <Grid>
+        <materialDesign:Card Width="1540" Height="850" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid Height="850" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="61*"/>
+                    <RowDefinition Height="314*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="2" Background="#643cb4" Margin="0,30,0,0"/>
+                <Grid Grid.Row="0" Background="#643cb4">
+                    <Border Grid.Column="0" Padding="20 0 0 0">
+                        <TextBlock Text="Личный кабинет" FontSize="60" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Border CornerRadius="3" Margin="20">
+                            <Border.Effect>
+                                <DropShadowEffect BlurRadius="1" Color="Black" ShadowDepth="0"/>
+                            </Border.Effect>
+                            <Button FontSize="40" Click="ButtonCourses" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Перейти на страницу курсов" Style="{StaticResource MaterialDesignFlatButton}" Padding="15 0 0 0" Height="99"/>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Button FontSize="40" Click="ButtonCreateCourse" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать курс" Style="{StaticResource MaterialDesignFlatButton}" Padding="15 0 0 0" Height="99"/>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Button FontSize="40" Click="ButtonMyProgress" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Мой прогресс" Style="{StaticResource MaterialDesignFlatButton}" Padding="15 0 0 0" Height="99"/>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Button FontSize="40" Click="ButtonExit" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Выйти из аккаунта" Style="{StaticResource MaterialDesignFlatButton}" Padding="15 0 0 0" Height="99"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Window>
